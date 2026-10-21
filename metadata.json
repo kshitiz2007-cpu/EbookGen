@@ -1,0 +1,6 @@
+{
+  "name": "Gyankunj Studio — E-book & Study Notes Designer",
+  "description": "Professional bilingual e-book, study notes, and exam paper designer with real-time A4 pagination, multi-chapter books, custom cover styles, and print-ready PDF export.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
