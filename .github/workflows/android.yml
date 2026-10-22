@@ -25,6 +25,8 @@ jobs:
 
       - name: Generate Android Project via Capacitor
         run: |
+          npm install @capacitor/cli @capacitor/core @capacitor/android --legacy-peer-deps
+          npx cap init EbookGen com.ebookgengk.app --web-dir=dist
           npx cap add android
           npx cap sync
 
