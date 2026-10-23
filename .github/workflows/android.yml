@@ -34,7 +34,8 @@ jobs:
       - name: Clean Duplicate Kotlin Classes
         run: |
           cd android
-          echo 'configurations.all { exclude group: "org.jetbrains.kotlin", module: "kotlin-stdlib-jdk7"; exclude group: "org.jetbrains.kotlin", module: "kotlin-stdlib-jdk8" }' >> build.gradle
+          echo 'subprojects { project -> if (project.hasProperty("android")) { android { configurations.all { exclude group: "org.jetbrains.kotlin", module: "kotlin-stdlib-jdk7" ; exclude group: "org.jetbrains.kotlin", module: "kotlin-stdlib-jdk8" } } } }' >> build.gradle
+          echo 'android { configurations.all { exclude group: "org.jetbrains.kotlin", module: "kotlin-stdlib-jdk7" ; exclude group: "org.jetbrains.kotlin", module: "kotlin-stdlib-jdk8" } }' >> app/build.gradle
 
       - name: Build with Gradle
         run: |
